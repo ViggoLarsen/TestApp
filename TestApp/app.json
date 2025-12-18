@@ -1,0 +1,30 @@
+{
+  "EULA": "",
+  "application": "26.0.0.0",
+  "brief": "",
+  "dependencies": [],
+  "description": "",
+  "help": "",
+  "id": "dd7345ae-cc47-460f-a2d5-61559a66cf73",
+  "idRanges": [
+    {
+      "from": 50000,
+      "to": 50100
+    }
+  ],
+  "logo": "",
+  "name": "TestApp",
+  "platform": "26.0.0.0",
+  "privacyStatement": "",
+  "publisher": "UNI4C",
+  "resourceExposurePolicy": {
+    "allowDebugging": true,
+    "allowDownloadingSource": true,
+    "includeSourceInSymbolFile": true
+  },
+  "runtime": "14.0",
+  "screenshots": [],
+  "target": "Cloud",
+  "url": "",
+  "version": "1.0.0.0"
+}
