@@ -1,0 +1,30 @@
+{
+  "EULA": "",
+  "application": "26.0.0.0",
+  "brief": "",
+  "dependencies": [],
+  "description": "",
+  "help": "",
+  "id": "0f6e7ab6-df4c-4386-b79e-cda8738e9c80",
+  "idRanges": [
+    {
+      "from": 60000,
+      "to": 60100
+    }
+  ],
+  "logo": "",
+  "name": "OtherApp",
+  "platform": "26.0.0.0",
+  "privacyStatement": "",
+  "publisher": "UNI4C",
+  "resourceExposurePolicy": {
+    "allowDebugging": true,
+    "allowDownloadingSource": true,
+    "includeSourceInSymbolFile": true
+  },
+  "runtime": "14.0",
+  "screenshots": [],
+  "target": "Cloud",
+  "url": "",
+  "version": "1.0.0.0"
+}
