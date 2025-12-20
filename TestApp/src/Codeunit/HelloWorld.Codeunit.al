@@ -4,7 +4,12 @@ codeunit 50000 "Hello World"
 
     procedure SayHello(): Text
     begin
-        exit('Hello, World!');
+        exit('Hello, Business Central!');
+    end;
+
+    procedure SayHelloTo(Name: Text): Text
+    begin
+        exit('Hello, ' + Name + '!');
     end;
 
     procedure GetCurrentDateTime(): DateTime
@@ -30,5 +35,15 @@ codeunit 50000 "Hello World"
         for Position := StrLen(InputText) downto 1 do
             ResultText += InputText[Position];
         exit(ResultText);
+    end;
+
+    procedure MultiplyNumbers(FirstNumber: Decimal; SecondNumber: Decimal): Decimal
+    begin
+        exit(FirstNumber * SecondNumber);
+    end;
+
+    procedure IsEven(Value: Integer): Boolean
+    begin
+        exit(Value mod 2 = 0);
     end;
 }
