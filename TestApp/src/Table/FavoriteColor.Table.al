@@ -28,6 +28,19 @@ table 50001 "Favorite Color"
             MinValue = 0;
             MaxValue = 100;
         }
+        field(6; "Description"; Text[100])
+        {
+            Caption = 'Description';
+        }
+        field(7; "Created Date"; Date)
+        {
+            Caption = 'Created Date';
+            Editable = false;
+        }
+        field(8; "Popular"; Boolean)
+        {
+            Caption = 'Popular';
+        }
     }
 
     keys
@@ -44,6 +57,7 @@ table 50001 "Favorite Color"
     trigger OnInsert()
     begin
         ValidateHexCode();
+        "Created Date" := Today;
     end;
 
     trigger OnModify()
@@ -56,5 +70,15 @@ table 50001 "Favorite Color"
         if "Hex Code" <> '' then
             if StrLen("Hex Code") <> 7 then
                 Error('Hex code must be 7 characters (e.g., #FF0000)');
+    end;
+
+    procedure IsDarkColor(): Boolean
+    begin
+        exit(Brightness < 50);
+    end;
+
+    procedure GetColorInfo(): Text
+    begin
+        exit(StrSubstNo('%1 (%2)', "Color Name", "Hex Code"));
     end;
 }
