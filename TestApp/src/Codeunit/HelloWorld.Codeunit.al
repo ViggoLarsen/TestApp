@@ -9,7 +9,14 @@ codeunit 50000 "Hello World"
 
     procedure SayHelloTo(Name: Text): Text
     begin
+        if Name = '' then
+            exit('Hello, stranger!');
         exit('Hello, ' + Name + '!');
+    end;
+
+    procedure SayGoodbye(): Text
+    begin
+        exit('Goodbye, Business Central!');
     end;
 
     procedure GetCurrentDateTime(): DateTime
@@ -45,5 +52,22 @@ codeunit 50000 "Hello World"
     procedure IsEven(Value: Integer): Boolean
     begin
         exit(Value mod 2 = 0);
+    end;
+
+    procedure SubtractNumbers(FirstNumber: Decimal; SecondNumber: Decimal): Decimal
+    begin
+        exit(FirstNumber - SecondNumber);
+    end;
+
+    procedure DivideNumbers(Numerator: Decimal; Denominator: Decimal): Decimal
+    begin
+        if Denominator = 0 then
+            Error('Cannot divide by zero');
+        exit(Numerator / Denominator);
+    end;
+
+    procedure IsNegative(Value: Decimal): Boolean
+    begin
+        exit(Value < 0);
     end;
 }
