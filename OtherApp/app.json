@@ -2,7 +2,14 @@
   "EULA": "",
   "application": "26.0.0.0",
   "brief": "",
-  "dependencies": [],
+  "dependencies": [
+    {
+      "id": "6da8dd2f-e698-461f-9147-8e404244dd85",
+      "name": "Continia Document Capture",
+      "publisher": "Continia Software",
+      "version": "27.1.0.243474"
+    }
+  ],
   "description": "",
   "help": "",
   "id": "0f6e7ab6-df4c-4386-b79e-cda8738e9c80",
