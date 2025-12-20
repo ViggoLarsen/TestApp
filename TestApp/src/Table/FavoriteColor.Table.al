@@ -41,6 +41,17 @@ table 50001 "Favorite Color"
         {
             Caption = 'Popular';
         }
+        field(9; "Rating"; Integer)
+        {
+            Caption = 'Rating';
+            MinValue = 1;
+            MaxValue = 5;
+        }
+        field(10; "Category"; Option)
+        {
+            Caption = 'Category';
+            OptionMembers = " ","Warm","Cool","Neutral","Pastel";
+        }
     }
 
     keys
@@ -80,5 +91,16 @@ table 50001 "Favorite Color"
     procedure GetColorInfo(): Text
     begin
         exit(StrSubstNo('%1 (%2)', "Color Name", "Hex Code"));
+    end;
+
+    procedure IsHighRated(): Boolean
+    begin
+        exit(Rating >= 4);
+    end;
+
+    procedure MarkAsPopular()
+    begin
+        Popular := true;
+        Modify();
     end;
 }
